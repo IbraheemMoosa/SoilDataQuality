@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="mapStyle.css"/>
+    <!-- <style>
+       /* Set the size of the div element that contains the map */
+       #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 90%;  /* The width is the width of the web page */
+       }
+    </style> -->
+  </head>
+  <body>
+    <h3>Soil Quality</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: 30.2672, lng: -97.7431};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <!-- <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzWXhdALN0R6chj6cA7K_6x9SEZw3uPLk&callback=initMap">
+    </script> -->
+  <div class = "mapDiv" align="center">
+    <div class="left">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3444.3152726033672!2d-97.6589296844389!3d30.31354898178531!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644c9d2ee75f905%3A0x45a68fd045a219b0!2sLiberal+Arts+and+Science+Academy!5e0!3m2!1sen!2sus!4v1544309503389" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="right">
+      <h4>[Insert info about soil quality]</h4>
+    </div>
+  </div>
+  </body>
+</html>
